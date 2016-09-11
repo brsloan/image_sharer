@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-xs-12">
+        <div class="grid" >
+            <div class="grid-sizer"></div>
+            <div  ng-repeat="image in images" layout-images-after-repeat>
+             <div class="grid-item ">
+                <img src="{{image.url}}" class="img img-responsive"></img>
+                <span ng-click="likeImage(image)" class="likeButton" ng-class="{'liked' : isLikedByThisUser(image) }"  ><p><span class="glyphicon glyphicon-heart"></span> {{image.likers.length}}</p></span>
+                <div class="picFrame">
+                    <p class="caption">{{image.caption}}</p>
+                    <a href="/#/images/{{image.user.username}}"><p class="imageOwner">-{{image.user.username}}</p></a>
+                </div>
+                
+                <span ng-show="canEdit(image)" ng-click="removeImage(image)" class="remove-btn">&times;</span>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+

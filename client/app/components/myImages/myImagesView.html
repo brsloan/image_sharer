@@ -1,0 +1,44 @@
+<div class="row" >
+    <div class="col-xs-12">
+        <h1>{{thisUser.username}}'s Pictures</h1>
+        <p ng-show="thisUser.name && thisUser.city && thisUser.state && !canEdit">{{thisUser.name}} is from {{thisUser.city}}, {{thisUser.state}}</p>
+    </div>
+</div>
+
+<div class="row" ng-show="canEdit">
+    <div class="col-md-12">
+        <form ng-submit="addImage()" class="form">
+            <div class="row">
+                <div class="col-md-5">
+                    <input type="text" placeholder="Image URL" ng-model="imageUrl" class="form form-control"></input>
+                </div>
+                <div class="col-md-5">
+                    <input type="text" placeholder="Image Caption" ng-model="imageCaption" class="form form-control"></input>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="form form-control btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="grid" >
+            <div class="grid-sizer"></div>
+            <div  ng-repeat="image in images" layout-images-after-repeat>
+             <div class="grid-item ">
+                <img src="{{image.url}}" class="img img-responsive"></img>
+                <span ng-click="likeImage(image)" class="likeButton" ng-class="{'liked' : isLikedByThisUser(image) }"  ><p><span class="glyphicon glyphicon-heart"></span> {{image.likers.length}}</p></span>
+                <div class="picFrame">
+                    <p class="caption">{{image.caption}}</p>
+                    <a href="/#/images/{{image.user.username}}"><p class="imageOwner">-{{image.user.username}}</p></a>
+                </div>
+                
+                <span ng-show="canEdit" ng-click="removeImage(image)" class="remove-btn">&times;</span>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

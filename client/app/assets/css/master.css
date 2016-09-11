@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1a1a1a;
+  color: #f8f8f8;
+}
+
+.nav a {
+  color: #f8f8f8;
+}
+
+.nav a:hover, .nav a:focus {
+  color: #1a1a1a;
+}
+
+
+
+.remove-btn{
+  position: absolute;
+  right: 25px;
+  top: 12px;
+  color: white;
+  font-size: 16pt;
+  text-shadow: 1px 1px 1px black,
+             -1px -1px 1px black,
+             1px -1px 1px black,
+             -1px 1px 1px black;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+
+.user-info h3{
+  margin-left: 30px;
+}
+
+.clearer {
+  clear: both;
+}
+
+.go-btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.search-bars-btn{
+  float: right;
+}
+
+.subtitle{
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: none;
+}
+
+
+#footer {
+  font-size: 8pt;
+  text-align: center;
+  color: #ccc;
+}
+
+.profile-image img{
+  margin: auto;
+}
+
+.top-profile-field h2{
+  margin-top: 0;
+}
+
+#mainTitle{
+  font-size: 14pt;
+}
+
+.grid {
+  width: 100%;
+}
+
+.grid-sizer,
+.grid-item 
+{ 
+  float: left;
+  width: 20%; 
+  padding: 6px;
+}
+
+.likeButton{
+  position: absolute;
+  margin-top: -18pt;
+  margin-left: 6pt;
+  color: #cccccc;
+  text-shadow: 1px 1px 0px #444,
+               1px 1px 0px #444;
+  cursor: pointer;
+}
+
+.liked {
+  color: #cc0000;
+}
+
+.grid-item img{
+  border: 1px solid #b3b3b3;
+}
+.picFrame {
+  background-color: #f2f2f2;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 6px;
+  border: 1px solid #b3b3b3;
+}
+
+.picFrame p{
+  margin: 0px;
+}
+
+.caption {
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.imageOwner {
+  text-align: right;
+  font-style: italic;
+  
+  font-size: 10pt;
+}
+
+@media only screen and (max-width : 992px) {
+
+.grid-sizer,
+.grid-item 
+{ 
+  float: left;
+  width: 25%; 
+}
+  
+  
+}
+
+@media only screen and (max-width : 768px) {
+
+.nav li {
+  text-align: center;
+  font-size: 16pt;
+}
+
+.grid-sizer,
+.grid-item 
+{ 
+  float: left;
+  width: 50%; 
+}
+
+}
+
+.color-primary-0 { color: #AA3939 }	/* Main Primary color */
+.color-primary-1 { color: #FFAAAA }
+.color-primary-2 { color: #D46A6A }
+.color-primary-3 { color: #801515 }
+.color-primary-4 { color: #550000 }
+
+.color-secondary-1-0 { color: #226666 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #669999 }
+.color-secondary-1-2 { color: #407F7F }
+.color-secondary-1-3 { color: #0D4D4D }
+.color-secondary-1-4 { color: #003333 }
+
+.color-secondary-2-0 { color: #7B9F35 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #D4EE9F }
+.color-secondary-2-2 { color: #A5C663 }
+.color-secondary-2-3 { color: #567714 }
+.color-secondary-2-4 { color: #354F00 }
